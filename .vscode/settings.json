@@ -1,0 +1,29 @@
+{
+  "files.eol": "\n",
+  "files.readonlyInclude": {
+    "**/routeTree.gen.ts": true,
+    "**/.tanstack/**/*": true,
+    "pnpm-lock.yaml": true
+  },
+  "files.watcherExclude": {
+    "**/routeTree.gen.ts": true,
+    "**/.tanstack/**/*": true,
+    "pnpm-lock.yaml": true
+  },
+  "search.exclude": {
+    "**/routeTree.gen.ts": true,
+    "**/.tanstack/**/*": true,
+    "pnpm-lock.yaml": true,
+    "node_modules": true,
+    ".output": true,
+    "build": true,
+    "dist": true,
+    ".env": true
+  },
+  "biome.enabled": true,
+  "editor.defaultFormatter": "biomejs.biome",
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "[json][jsonc][typescript][typescriptreact][javascript][javascriptreact][html][css]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  }
+}

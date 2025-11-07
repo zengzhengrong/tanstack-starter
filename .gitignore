@@ -1,0 +1,10 @@
+/app.config.timestamp*
+/node_modules
+/.tanstack
+/.output
+/.nitro
+/.cache
+/build
+/.env
+/dist
+/tmp

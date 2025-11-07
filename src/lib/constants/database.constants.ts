@@ -1,0 +1,3 @@
+const UUID_V7_GENERATOR_FUNCTION = 'uuidv7()'
+
+export { UUID_V7_GENERATOR_FUNCTION }

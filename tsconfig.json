@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "noEmit": true,
+    "strict": true,
+    "jsx": "react-jsx",
+    "module": "ESNext",
+    "target": "ES2022",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "strictNullChecks": true,
+    "noImplicitReturns": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "Bundler",
+    "lib": ["DOM", "DOM.Iterable", "ES2022"],
+    "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "@/*": ["src/*"],
+      "@/auth/*": ["src/lib/auth/*"],
+      "@/components/*": ["src/lib/components/*"],
+      "@/constants/*": ["src/lib/constants/*"],
+      "@/controllers/*": ["src/lib/controllers/*"],
+      "@/database/*": ["src/lib/database/*"],
+      "@/graph/*": ["src/lib/graph/*"],
+      "@/layouts/*": ["src/lib/layouts/*"],
+      "@/logging/*": ["src/lib/logging/*"],
+      "@/middleware/*": ["src/lib/middleware/*"],
+      "@/pages/*": ["src/lib/pages/*"],
+      "@/scripts/*": ["src/lib/scripts/*"],
+      "@/services/*": ["src/lib/services/*"],
+      "@/styles/*": ["src/lib/styles/*"],
+      "@/sync/*": ["src/lib/sync/*"],
+      "@/types/*": ["src/lib/types/*"],
+      "@/ui/*": ["src/lib/ui/*"],
+      "@/utils/*": ["src/lib/utils/*"]
+    }
+  },
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules", "vite.config.ts"],
+  "references": [{ "path": "tsconfig.vite.json" }]
+}
