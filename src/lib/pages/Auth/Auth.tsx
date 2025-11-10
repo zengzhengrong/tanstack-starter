@@ -108,22 +108,28 @@ const Auth = () => {
   const handleSocialLogin = async (provider: AuthProvider) => {
     try {
       setIsLoading(true)
-
       await loginWithSocialProvider(provider)
     } catch {
+      setIsLoading(false)
+    } finally {
+      setIsLoading(true)
+    }
+  }
+
+  const handleSocialLogout = async () => {
+    try {
+      setIsLoading(true)
+      await logoutSession(router, queryClient)
+    } catch {
+      setIsLoading(false)
+    } finally {
       setIsLoading(false)
     }
   }
 
   const renderLoginButtons = () => {
     return user ? (
-      <Button
-        variant="outline"
-        className="w-full cursor-pointer"
-        onClick={async () => {
-          await logoutSession(router, queryClient)
-        }}
-      >
+      <Button variant="outline" className="w-full cursor-pointer" onClick={handleSocialLogout}>
         <div className="flex items-center justify-center gap-2">
           <LogOut className="h-4 w-4" />
           <span>{t('Sign out')}</span>
