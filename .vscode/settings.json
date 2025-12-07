@@ -45,6 +45,11 @@
   "biome.enabled": true,
   "editor.defaultFormatter": "biomejs.biome",
   "typescript.tsdk": "./node_modules/typescript/lib",
+  "typescript.validate.enable": true,
+  "javascript.validate.enable": true,
+  "files.exclude": {
+    "**/node_modules": true // 不显示node_modules的依赖
+  },
   "[json][jsonc][typescript][typescriptreact][javascript][javascriptreact][html][css]": {
     "editor.defaultFormatter": "biomejs.biome"
   }
