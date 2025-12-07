@@ -9,3 +9,7 @@
 /.env
 /dist
 /tmp
+.windsurf
+code-style.md
+.specs
+.vscode

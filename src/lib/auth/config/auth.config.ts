@@ -109,11 +109,6 @@ const auth = createServerOnlyFn(() =>
       }
     },
     socialProviders: {
-      discord: {
-        overrideUserInfoOnSignIn: true,
-        clientId: process.env.DISCORD_CLIENT_ID as string,
-        clientSecret: process.env.DISCORD_CLIENT_SECRET as string
-      },
       github: {
         overrideUserInfoOnSignIn: true,
         clientId: process.env.GITHUB_CLIENT_ID as string,

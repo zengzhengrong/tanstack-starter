@@ -12,7 +12,7 @@ const config = defineConfig({
   schema: './src/lib/database/schema',
   dbCredentials: {
     url: process.env.DATABASE_URL as string,
-    ssl: process.env.NODE_ENV === ENVIRONMENTS.PROD
+    ssl: { rejectUnauthorized: false }
   }
 }) satisfies Config
 

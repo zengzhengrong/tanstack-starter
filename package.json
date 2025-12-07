@@ -21,7 +21,8 @@
   },
   "scripts": {
     "prepare": "husky",
-    "dev": "vite dev",
+    "clean": "node -e \"const fs=require('fs');['node_modules/.vite','.tanstack','.cache'].forEach(d=>{try{fs.rmSync(d,{recursive:true,force:true})}catch{}})\"",
+    "dev": "npm run clean && vite dev",
     "build": "vite build",
     "serve": "vite preview",
     "migrate": "drizzle-kit migrate",
