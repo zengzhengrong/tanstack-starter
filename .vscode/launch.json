@@ -2,28 +2,51 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Debug Dev Server",
+      "name": "Debug Dev Server (Vite)",
       "type": "node",
       "request": "launch",
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "dev"],
       "cwd": "${workspaceFolder}",
       "console": "integratedTerminal",
-      "skipFiles": ["<node_internals>/**", "**/node_modules/**"]
+      "skipFiles": ["<node_internals>/**", "**/node_modules/**"],
+      "env": {
+        "NODE_OPTIONS": "--inspect"
+      },
+      "sourceMaps": true,
+      "resolveSourceMapLocations": ["${workspaceFolder}/**", "${workspaceFolder}/.tanstack/**", "!**/node_modules/**"],
+      "outFiles": ["${workspaceFolder}/.tanstack/**/*.js", "${workspaceFolder}/.output/**/*.js"]
     },
     {
-      "name": "Debug Chrome",
+      "name": "Debug Chrome (Client)",
       "type": "chrome",
       "request": "launch",
       "url": "http://localhost:3000",
-      "webRoot": "${workspaceFolder}/src",
-      "sourceMaps": true
+      "webRoot": "${workspaceFolder}",
+      "sourceMaps": true,
+      "sourceMapPathOverrides": {
+        "/@fs/*": "${webRoot}/*",
+        "/src/*": "${webRoot}/src/*"
+      }
+    },
+    {
+      "name": "Attach to Chrome",
+      "type": "chrome",
+      "request": "attach",
+      "port": 9222,
+      "webRoot": "${workspaceFolder}",
+      "sourceMaps": true,
+      "sourceMapPathOverrides": {
+        "/@fs/*": "${webRoot}/*",
+        "/src/*": "${webRoot}/src/*"
+      }
     }
   ],
   "compounds": [
     {
       "name": "Full Stack Debug",
-      "configurations": ["Debug Dev Server", "Debug Chrome"]
+      "configurations": ["Debug Dev Server (Vite)", "Debug Chrome (Client)"],
+      "stopAll": true
     }
   ]
 }

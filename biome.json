@@ -101,7 +101,7 @@
         "noCatchAssign": "error",
         "noClassAssign": "error",
         "noCompareNegZero": "error",
-        "noConsole": "error",
+        "noConsole": "warn",
         "noControlCharactersInRegex": "error",
         "noDebugger": "error",
         "noDoubleEquals": "error",

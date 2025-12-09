@@ -14,7 +14,7 @@ const config = defineConfig(({ mode }) => {
   return {
     server: {
       host: true,
-      open: true,
+      open: false,
       port: parseInt(env.VITE_APP_PORT, 10)
     },
     preview: {

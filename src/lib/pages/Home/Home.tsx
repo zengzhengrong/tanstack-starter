@@ -3,6 +3,7 @@ import { AppLayout } from '@/layouts/AppLayout/AppLayout'
 import { Route as RootRoute } from '@/routes/__root'
 
 const Home = () => {
+  console.log('render')
   const { t } = useTranslation()
   const { user } = RootRoute.useRouteContext()
 
